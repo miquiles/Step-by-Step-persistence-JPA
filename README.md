@@ -1,4 +1,4 @@
-# persistenceJPA
+# PersistenceJPA
  
 JPA - Java Persistence API
 
@@ -82,9 +82,13 @@ Configurando a conexão com o banco de dados.
 
 	2.1 - Abra o shell e crie as tabelas do banco e insira os dados para teste
 create database cadastrocliente;
+
 use cadastrocliente;
+
 create table cliente (id bigint not null auto_increment, nome varchar(100) not null, primary key (id));
+
 insert into cliente (id,nome) values (null,'Armazem Feliz');
+
  select * from cliente;
 
 
