@@ -6,7 +6,7 @@ JPA - Java Persistence API
 
 
 
-Anotações de mapeamento
+Anotações de mapeamento:
 
 
 @Entity
@@ -18,6 +18,7 @@ Anotações de mapeamento
 @Column
 
 Criando um CRUD com JPA
+
 1 - Crie um projeto Maven
 
 2 - Add as dependencias no POM.XML 
@@ -38,7 +39,8 @@ Criando um CRUD com JPA
 
 
 </dependencies>
-Configurando a conexão com o banco de dados.
+
+Configurando a conexão com o banco de dados:
 
 1- No caminho src/main/resources crie uma pasta chamada META-INF, após crie um arquivo chamado persistence.xml.
 
@@ -81,15 +83,16 @@ Configurando a conexão com o banco de dados.
 2 - Criar o banco de dados e mapeie.
 
 	2.1 - Abra o shell e crie as tabelas do banco e insira os dados para teste
-create database cadastrocliente;
+	
+* create database cadastrocliente;
 
-use cadastrocliente;
+* use cadastrocliente;
 
-create table cliente (id bigint not null auto_increment, nome varchar(100) not null, primary key (id));
+* create table cliente (id bigint not null auto_increment, nome varchar(100) not null, primary key (id));
 
-insert into cliente (id,nome) values (null,'Armazem Feliz');
+* insert into cliente (id,nome) values (null,'Armazem Feliz');
 
- select * from cliente;
+ * select * from cliente;
 
 
 
@@ -124,8 +127,11 @@ insert into cliente (id,nome) values (null,'Armazem Feliz');
 4 - Crie Anotações
 
 @Entity na classe Cliente // Referencía a classe para mapear uma tabela
+
 @Id apenas na chave primária (id)
+
 @Table (name = “db_cliente”) // Quando o nome da classe é diferente da tabela no banco
+
 @Column (name=”cli_id”) // configura o nome das colunas.
 
 
@@ -187,9 +193,13 @@ public class Cliente {
 
 
 5 - Testando nossa configuração
+
 	4.1 Crie um pacote Cadastro cliente
+	
 	4.2 Crie uma classe de testes chamada “Exemplo”
+	
 	4.3 Crie o método MAIN
+	
 	4.4 Insira os dados da fábrica:
 
 package cadastrocliente;
