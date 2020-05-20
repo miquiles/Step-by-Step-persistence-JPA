@@ -1,12 +1,12 @@
 # PersistenceJPA
  
-JPA - Java Persistence API
+## JPA - Java Persistence API
 
-1- Representar com classe JAVA as tabelas do banco de dados relacional (SQL, ORACLE,POSTGRE)
+Representar com classe JAVA as tabelas do banco de dados relacional (SQL, ORACLE,POSTGRE)
 
 
 
-Anotações de mapeamento:
+Anotações basicas de mapeamento:
 
 
 @Entity
