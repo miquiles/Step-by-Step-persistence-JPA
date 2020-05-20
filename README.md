@@ -23,22 +23,7 @@ Criando um CRUD com JPA
 
 2 - Add as dependencias no POM.XML 
 
-<dependencies>
-
-<dependency>
-   		<groupId> org.hibernate</groupId>
-  		 <artifactId>hibernate-core</artifactId>
-  		 <version>5.4.2.Final</version>
-</dependency>
-
-   <dependency>
- 		  <groupId> mysql</groupId>
- 		  <artifactId>mysql-connector-java</artifactId>
-   <version>8.0.16</version>
-   </dependency>
-
-
-</dependencies>
+![pom](https://github.com/miquiles/Step-by-Step-persistence-JPA/blob/master/pom.png)
 
 Configurando a conexão com o banco de dados:
 
