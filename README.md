@@ -92,7 +92,7 @@ Configurando a conexão com o banco de dados:
 
 * insert into cliente (id,nome) values (null,'Armazem Feliz');
 
- * select * from cliente;
+ ![banco](https://github.com/miquiles/Step-by-Step-persistence-JPA/blob/master/banco.png)
 
 
 
