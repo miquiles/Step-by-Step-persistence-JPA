@@ -135,14 +135,17 @@ Configurando a conexão com o banco de dados:
 @Column (name=”cli_id”) // configura o nome das colunas.
 
 
+
+
+
 	package model;
 
-import javax.persistence.*;
-import java.util.Objects;
-
-@Entity
-@Table (name="cliente")
-public class Cliente {
+	import javax.persistence.*;
+	import java.util.Objects;
+ 
+	@Entity
+	@Table (name="cliente")
+	public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // quem vai gerar a primarykey será o banco de dados
@@ -194,23 +197,23 @@ public class Cliente {
 
 5 - Testando nossa configuração
 
-	4.1 Crie um pacote Cadastro cliente
+4.1 Crie um pacote Cadastro cliente
 	
-	4.2 Crie uma classe de testes chamada “Exemplo”
+4.2 Crie uma classe de testes chamada “Exemplo”
 	
-	4.3 Crie o método MAIN
+4.3 Crie o método MAIN
 	
-	4.4 Insira os dados da fábrica:
+4.4 Insira os dados da fábrica:
 
-package cadastrocliente;
+	package cadastrocliente;
 
-import model.Cliente;
+	import model.Cliente;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+	import javax.persistence.EntityManager;
+	import javax.persistence.EntityManagerFactory;
+	import javax.persistence.Persistence;
 
-public class Exemplo {
+	public class Exemplo {
 
     public static void main(String[] args) {
 
@@ -279,9 +282,9 @@ public class Exemplo {
 
 
 
-
-    }
-}
+	
+  	  }
+	}
 
 
 
