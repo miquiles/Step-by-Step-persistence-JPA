@@ -68,10 +68,11 @@ public class Exemplo {
         */
 
 
-        //Vão nascer e vão ser fechadas no final do metodo Main.
+        /*Vão nascer e vão ser fechadas no final do metodo Main.
+        
          entityManager.close();
          entityManagerFactory.close();
-
+        */
 
 
 
