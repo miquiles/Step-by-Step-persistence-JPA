@@ -90,7 +90,7 @@ Configurando a conexão com o banco de dados:
 
 * create table cliente (id bigint not null auto_increment, nome varchar(100) not null, primary key (id));
 
-* insert into cliente (id,nome) values (null,'Armazem Feliz');
+* insert into cliente (nome) values ('Tv teste');
 
  ![banco](https://github.com/miquiles/Step-by-Step-persistence-JPA/blob/master/banco.png)
 
