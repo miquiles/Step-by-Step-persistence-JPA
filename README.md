@@ -29,39 +29,24 @@ Configurando a conexão com o banco de dados:
 
 1- No caminho src/main/resources crie uma pasta chamada META-INF, após crie um arquivo chamado persistence.xml.
 
-<?xml version="1.0" encoding="UTF-8"?>
-<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	<?xml version="1.0" encoding="UTF-8"?>
+	<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
 
+		<persistence-unit name="Clientes-PU" transaction-type="RESOURCE_LOCAL">
+      
+      			<properties>
 
-   <persistence-unit name="Clientes-PU" transaction-type="RESOURCE_LOCAL">
-       <properties>
+           		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+           		<property name="hibernate.connection.show_sql" value="true" />
+           		<property name="hibernate.hbm2ddl.auto" value="update" />
+           		<property name="javax.persistence.jdbc.user" value="root"/>
+           		<property name="javax.persistence.jdbc.password" value="12345"/>
+           		<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cadastrocliente?useTimezone=true&amp;serverTimezone=UTC" />
 
-           <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-           <property name="hibernate.connection.show_sql" value="true" />
-           <property name="hibernate.hbm2ddl.auto" value="update" />
-           <property name="javax.persistence.jdbc.user" value="root"/>
-           <property name="javax.persistence.jdbc.password" value="12345"/>
-           <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cadastrocliente?useTimezone=true&amp;serverTimezone=UTC" />
-
-       </properties>
-   </persistence-unit>
-</persistence>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       			</properties>
+   		</persistence-unit>
+	</persistence>
 
 
 
@@ -80,12 +65,6 @@ Configurando a conexão com o banco de dados:
  ![banco](https://github.com/miquiles/Step-by-Step-persistence-JPA/blob/master/banco.png)
 
 
-
-
-
-
-
-
 3 - Criando uma classe referencia 
 
 	2.2 - Crie um pacote chamado Model dentro do pacote src/JAVA
@@ -96,28 +75,15 @@ Configurando a conexão com o banco de dados:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 4 - Crie Anotações
 
-@Entity na classe Cliente // Referencía a classe para mapear uma tabela
+	@Entity na classe Cliente // Referencía a classe para mapear uma tabela
 
-@Id apenas na chave primária (id)
+	@Id apenas na chave primária (id)
 
-@Table (name = “db_cliente”) // Quando o nome da classe é diferente da tabela no banco
+	@Table (name = “db_cliente”) // Quando o nome da classe é diferente da tabela no banco
 
-@Column (name=”cli_id”) // configura o nome das colunas.
+	@Column (name=”cli_id”) // configura o nome das colunas.
 
 
 
@@ -168,13 +134,6 @@ Configurando a conexão com o banco de dados:
         return Objects.hash(Id);
     }
 }
-
-
-
-
-
-
-
 
 
 
